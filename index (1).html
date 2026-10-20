@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Sistema de Gestión de Horas — Departamentales Norte</title>
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #123d6a;
+      --gold: #d8b45a;
+      --paper: #f4f7fb;
+      --ink: #182638;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 28px 16px;
+      font-family: Arial, Helvetica, sans-serif; color: var(--ink);
+      background: radial-gradient(circle at top, #24517d 0, #102c4d 42%, #071629 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .app { width: 100%; max-width: 560px; }
+    .card {
+      overflow: hidden; border-radius: 22px; background: white;
+      box-shadow: 0 24px 70px rgba(0,0,0,.35);
+    }
+    header {
+      padding: 30px 24px 26px; text-align: center; color: white;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-bottom: 4px solid var(--gold);
+    }
+    .seal {
+      width: 104px; height: 104px; display: block; margin: 0 auto 15px;
+      filter: drop-shadow(0 5px 8px rgba(0,0,0,.25));
+    }
+    .eyebrow { margin: 0 0 8px; color: #e7ca7c; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+    h1 { margin: 0; font-size: clamp(21px, 5vw, 29px); line-height: 1.2; }
+    .subtitle { margin: 9px 0 0; color: #d9e4f0; font-size: 14px; line-height: 1.5; }
+    main { padding: 26px; background: var(--paper); }
+    .notice {
+      padding: 14px 15px; border-radius: 12px; background: #fff8e5;
+      border: 1px solid #ead79d; color: #5e4a17; font-size: 13px; line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .actions { display: grid; gap: 12px; }
+    .btn {
+      display: flex; justify-content: center; align-items: center; gap: 10px;
+      width: 100%; min-height: 54px; padding: 14px 18px; border-radius: 12px;
+      background: linear-gradient(135deg, #164b7c, #0b2a4a);
+      color: white; text-decoration: none; font-size: 15px; font-weight: 700;
+      border: 1px solid rgba(255,255,255,.12); transition: transform .15s, box-shadow .15s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(11,42,74,.2); }
+    .btn.secondary { background: white; color: var(--navy); border: 1px solid #cbd6e3; }
+    .icon { font-size: 20px; }
+    .hint { margin: 18px 0 0; color: #5d6b7b; font-size: 12px; line-height: 1.6; text-align: center; }
+    footer { padding: 15px 20px; text-align: center; color: #d7e0eb; font-size: 11px; }
+    @media (max-width: 420px) {
+      body { padding: 14px 10px; }
+      header { padding: 25px 18px 22px; }
+      main { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <header>
+        <!-- Escudo circular ilustrativo; se puede reemplazar por el escudo oficial. -->
+        <svg class="seal" viewBox="0 0 120 120" role="img" aria-label="Emblema circular de Departamentales Norte">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f7e5a0"/>
+              <stop offset="1" stop-color="#b88d32"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="56" fill="#071629" stroke="url(#gold)" stroke-width="3"/>
+          <circle cx="60" cy="60" r="48" fill="#123d6a" stroke="#f3df9a" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="31" fill="#f7f9fc" stroke="#d8b45a" stroke-width="2"/>
+          <text x="60" y="20" text-anchor="middle" fill="#f7e5a0" font-size="7.2" font-weight="bold" letter-spacing=".8">DIRECCIÓN GENERAL</text>
+          <text x="60" y="108" text-anchor="middle" fill="#f7e5a0" font-size="7.1" font-weight="bold" letter-spacing=".5">DEPARTAMENTALES NORTE</text>
+          <path d="M60 36 L66 49 L80 50 L69 60 L72 74 L60 67 L48 74 L51 60 L40 50 L54 49 Z" fill="#123d6a" opacity=".18"/>
+          <text x="60" y="72" text-anchor="middle" fill="#123d6a" font-size="37" font-family="Georgia,serif" font-weight="bold">N</text>
+        </svg>
+        <p class="eyebrow">ADMINISTRACIÓN Y CONTROL</p>
+        <h1>Sistema de Gestión de Horas</h1>
+        <p class="subtitle">Dirección General<br>Departamentales Norte</p>
+      </header>
+      <main>
+        <div class="notice">
+          <strong>Acceso al sistema</strong><br>
+          Ingrese mediante el botón para abrir la aplicación de carga y consulta de horas.
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://script.google.com/macros/s/AKfycbxu3yokgd01epIf4xwqlKYaP_qS786Qd9R-gO1FLD9REKZ2AEBlNHNl2rGAZlCL682H/exec" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true">🔐</span> INGRESAR AL SISTEMA
+          </a>
+        </div>
+        <p class="hint">La validación de usuario y la gestión de datos continúan realizándose en la aplicación de Google Apps Script vinculada.</p>
+      </main>
+    </div>
+    <footer>Dirección General — Departamentales Norte</footer>
+  </div>
+</body>
+</html>
